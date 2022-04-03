@@ -24,24 +24,24 @@
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        <div class="row">          
-          <div class="col-12">            
+        <div class="row">
+          <div class="col-12">
             <form action="{{route('admin.post.store')}}" method="POST" enctype="multipart/form-data">
               @csrf
-              <div class="form-group w-25">  
+              <div class="form-group w-25">
                 <input type="text" class="form-control" name="title" placeholder="Название поста" value="{{old('title')}}" >
                 @error('title')
                   <div class="text-danger">{{$message}}
-                  </div>             
+                  </div>
                 @enderror
-              </div> 
+              </div>
               <div class="form-group">
                 <textarea id="summernote" name="content">{{old('content')}}</textarea>
                 @error('content')
                   <div class="text-danger">{{$message}}
-                  </div>             
+                  </div>
                 @enderror
-              </div> 
+              </div>
                <div class="form-group w-50">
                     <label for="exampleInputFile">Добавить превью</label>
                     <div class="input-group">
@@ -55,9 +55,9 @@
                     </div>
                     @error('preview_image')
                     <div class="text-danger">{{$message}}
-                    </div>             
-                    @enderror     
-              </div>      
+                    </div>
+                    @enderror
+              </div>
               <div class="form-group w-50">
                     <label for="exampleInputFile">Добавить главное изображение</label>
                     <div class="input-group">
@@ -71,7 +71,7 @@
                     </div>
                     @error('main_image')
                     <div class="text-danger">{{$message}}
-                    </div>             
+                    </div>
                     @enderror
               </div>
               <div class="form-group w-50">
@@ -83,9 +83,9 @@
                         </select>
                         @error('category_id')
                     <div class="text-danger">{{$message}}
-                    </div>             
+                    </div>
                     @enderror
-              </div> 
+              </div>
               <div class="form-group">
                   <label>Тэги</label>
                   <select class="select2" name="tag_ids[]" multiple="multiple" data-placeholder="Выберите тэги" style="width: 100%;">
@@ -95,17 +95,17 @@
                   </select>
                   @error('tag_ids')
                     <div class="text-danger">{{$message}}
-                    </div>             
+                    </div>
                     @enderror
-              </div>             
-              <div class="form-group"> 
-                <input type="submit" class="btn  btn-primary" value="Добавить"> 
-              </div>        
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn  btn-primary" value="Добавить">
+              </div>
             </form>
-          </div>          
+          </div>
         </div>
         <!-- /.row -->
-   
+
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
