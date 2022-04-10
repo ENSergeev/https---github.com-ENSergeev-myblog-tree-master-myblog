@@ -9,10 +9,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
-  <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">  
+  <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  
+
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
   <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="{{asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
   <!-- Daterange picker -->
   <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
-  
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -31,13 +31,23 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light ">
     <!-- Left navbar links -->
+    <div class="col-12 d-flex justify-content-between">
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>         
-    </ul>   
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <form action="{{route('logout')}}" method="POST">
+            @csrf
+            <input class="btn btn-outline-primary" type="submit" value="Выйти">
+        </form>
+      </li>
+    </ul>
+    </div>
   </nav>
   <!-- /.navbar -->
 
@@ -45,9 +55,9 @@
 
   @yield('content')
   <footer class="main-footer">
-    <strong>Myblog</strong>    
+    <strong>Myblog</strong>
     <div class="float-right d-none d-sm-inline-block">
-      <b>bogdan</b> 
+      <b>bogdann</b>
     </div>
   </footer>
 
@@ -83,8 +93,8 @@
     $('#summernote').summernote();
   });
   $(function () {
-  bsCustomFileInput.init();  
-  $('.select2').select2() 
+  bsCustomFileInput.init();
+  $('.select2').select2()
 });
 </script>
 <style>
