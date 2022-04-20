@@ -17,10 +17,12 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        // dd($request->user());
         // dd(auth()->user()->name);
-        // dd(1111111);
-        if(auth()->user()->role!==User::ROLE_ADMIN){
-            abort(404);
+        // dd((int)auth()->user()->role);
+        if((int)auth()->user()->role!==User::ROLE_ADMIN){
+            // dd(User::ROLE_ADMIN);
+            abort(404,'Право пользователя ограничено посредником');
         }
         return $next($request);
     }

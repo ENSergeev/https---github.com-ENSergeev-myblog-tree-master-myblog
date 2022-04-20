@@ -15,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'Main'], function () {
     Route::get('/', 'IndexController');
 });
-Auth::routes(['veryfy' => true]);
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware'=> ['auth','admin', 'verified']], function () {
+// Auth::routes();
+Auth::routes(['verify' => true]);
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin',  'middleware'=> ['auth','admin', 'verified']], function () {
     Route::group(['namespace' => 'Main'], function () {
         Route::get('/', 'IndexController');
     });
