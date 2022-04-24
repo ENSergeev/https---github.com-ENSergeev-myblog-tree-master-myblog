@@ -11,9 +11,9 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
-            </ol>
+                <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Главная</a></li>
+                <li class="breadcrumb-item active">Категории</li>
+              </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -29,7 +29,7 @@
             <a href="{{route('admin.category.create')}}" class="btn btn-primary">Добавить</a>
           </div>
         </div>
-        <div class="row">  
+        <div class="row">
           <div class="col-6">
             <div class="card">
               <!-- /.card-header -->
@@ -55,7 +55,7 @@
                          @method('DELETE')
                           <button type="submit" class="border-0 bg-transparent">
                           <i class="fas fa-trash text-danger" role="button"></i>
-                          </button> 
+                          </button>
                         </form>
                     </tr>
                   @endforeach
@@ -68,7 +68,7 @@
           </div>
         </div>
         <!-- /.row -->
-   
+
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
