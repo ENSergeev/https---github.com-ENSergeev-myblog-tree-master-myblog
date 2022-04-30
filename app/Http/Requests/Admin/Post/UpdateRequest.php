@@ -46,7 +46,7 @@ class UpdateRequest extends FormRequest
             'category_id.required'=>'Это поле необходимо для заполнения',
             'category_id.integer'=>'ID категории должен быть числом',
             'category_id.exists'=>'ID категории должен быть в базе данных',
-            'tag_ids.array'=>'Необходимо отправит массив данных',
+            'tag_ids.array'=>'Необходимо отправить массив данных',
 
         ];
     }

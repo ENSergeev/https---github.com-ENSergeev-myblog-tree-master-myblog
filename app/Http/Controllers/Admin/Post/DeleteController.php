@@ -7,10 +7,11 @@ use App\Http\Controllers\Controller;
 
 class DeleteController extends BaseController
 {
-   
+
     public function __invoke(Post $post){
+        // dd($post);
         $post->delete();
-        return redirect()->route('admin.post.index');   
-    } 
+        return redirect()->route('admin.post.index');
+    }
 }
 
