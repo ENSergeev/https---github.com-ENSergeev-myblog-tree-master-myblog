@@ -9,8 +9,9 @@ use App\Http\Controllers\Controller;
 class EditController extends Controller
 {
     public function __invoke(Comment $comment){
-        dd($comment);
+        dump($comment);
         $comments = auth()->user()->comments;
+        dump($comments);
         return view('personal.comment.edit',compact('comment'));
     }
 }

@@ -10,9 +10,11 @@ use App\Http\Controllers\Controller;
 class DeleteController extends Controller
 {
     public function __invoke(Post $post){
-        dd(auth()->user()->id);
+        // dump(auth()->user());
+        // dump(auth()->user()->id);
+        // dump($post);
+        // dump(auth()->user()->likedPosts());
         auth()->user()->likedPosts()->detach($post->id);
-        // dd($posts);
         return redirect()->route('personal.liked.index');
     }
 }
