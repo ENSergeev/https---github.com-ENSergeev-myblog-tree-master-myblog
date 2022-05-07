@@ -4,7 +4,7 @@
         <div class="container">
             <h1 class="edica-page-title" data-aos="fade-up">ТУКТУК</h1>
             <section class="featured-posts-section">
-                <div class="row">
+                <div class="row mb-4">
                     @foreach ($posts as $post)
                     <div class="col-md-4 fetured-post blog-post" data-aos="fade-right">
                         <div class="blog-post-thumbnail-wrapper">
@@ -16,12 +16,12 @@
                         </a>
                     </div>
                     @endforeach
-                    <div class="row col-12">
+                </div>
+                    <div class="row">
                         <div class = "mx-auto" style="margin-top: -100px">
                             {{ $posts->links() }}
                         </div>
                     </div>
-                </div>
             </section>
             <div class="row">
                 <div class="col-md-8">
