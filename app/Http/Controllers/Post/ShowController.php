@@ -12,11 +12,11 @@ class ShowController extends Controller
     public function __invoke(Post $post){
 
         $date = Carbon::parse($post->created_at);
-        $relatedPost = Post::where('category_id', $post->category_id)
+        $relatedPosts = Post::where('category_id', $post->category_id)
         ->where('id','!=', $post->id)
         ->get()
         ->take(3);
         // dd($relatedPost);
-        return view('post.show', compact('post','date','relatedPost'));
+        return view('post.show', compact('post','date','relatedPosts'));
     }
 }
